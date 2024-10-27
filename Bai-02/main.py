@@ -1,7 +1,6 @@
-class HocSinh:
-    ten = ""
-    tuoi = 0
-    lopHoc = ""
+# Từ file HocSinhClass nhập khẩu class HocSinh
+from HocSinhClass import HocSinh
+from XeClass import Xe
 
 hocSinh1 = HocSinh()
 hocSinh1.ten = "Bảo"
@@ -27,10 +26,7 @@ dsHocSinh = [hocSinh1, hocSinh2]
 #     print("Hết một học sinh")
 
 
-class Xe:
-    hangXe = ""
-    soChoNgoi = 0 
-    mauSac = ""
+
 
 xe1 = Xe()
 xe1.hangXe = "Toyota"
