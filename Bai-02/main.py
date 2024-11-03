@@ -25,9 +25,6 @@ dsHocSinh = [hocSinh1, hocSinh2]
 #     print(dsHocSinh[i].lopHoc)
 #     print("Hết một học sinh")
 
-
-
-
 xe1 = Xe()
 xe1.hangXe = "Toyota"
 xe1.soChoNgoi = 4 
@@ -44,4 +41,28 @@ for i in range(0, len(dsXe)):
     print(dsXe[i].hangXe)
     print(dsXe[i].soChoNgoi)
     print(dsXe[i].mauSac)
+    print("")
+
+
+from VatNuoiClass import VatNuoi
+
+vatNuoi1 = VatNuoi()
+vatNuoi1.Giong = "Husky"
+vatNuoi1.MauSac = "Trắng"
+vatNuoi1.Tuoi = 2
+vatNuoi1.CanNang = 10 
+
+vatNuoi2 = VatNuoi()
+vatNuoi2.Giong = "Alaska"
+vatNuoi2.MauSac = "Vàng"
+vatNuoi2.Tuoi = 1
+vatNuoi2.CanNang = 8 
+
+dsVatNuoi = [vatNuoi1, vatNuoi2]
+
+for i in range(0, len(dsVatNuoi)):
+    print(dsVatNuoi[i].Giong)
+    print(dsVatNuoi[i].MauSac)
+    print(dsVatNuoi[i].Tuoi)
+    print(dsVatNuoi[i].CanNang)
     print("")
