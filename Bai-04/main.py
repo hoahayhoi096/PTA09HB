@@ -1,16 +1,28 @@
-from classes.DongVatCls import DongVat
-from classes.PhuongTienCls import XeMay, Oto
+# from classes.DongVatCls import DongVat
+# from classes.PhuongTienCls import XeMay, Oto
 
-# dongVat1 = DongVat("Sư tử", 10, "Ăn thit", "Châu phi")
+# # dongVat1 = DongVat("Sư tử", 10, "Ăn thit", "Châu phi")
 
-# dongVat1.inThongTin()
+# # dongVat1.inThongTin()
 
-# dongVat1.capNhatMoiTrongSong("Trong nhà")
+# # dongVat1.capNhatMoiTrongSong("Trong nhà")
 
-# dongVat1.inThongTin()
-xeMay = XeMay("Xe tay ga", "12ABC", "Kawasaki", "Đỏ")
+# # dongVat1.inThongTin()
+# xeMay = XeMay("Xe tay ga", "12ABC", "Kawasaki", "Đỏ")
 
-oTo = Oto("Bốn chỗ", "12ABD", "Honda", "Trắng")
+# oTo = Oto("Bốn chỗ", "12ABD", "Honda", "Trắng")
 
-xeMay.display_info()
-oTo.display_info()
+# xeMay.display_info()
+# oTo.display_info()
+
+
+from PyQt6.QtWidgets import QApplication, QWidget
+import sys
+from scripts.LoginScr import Login
+
+app = QApplication(sys.argv)
+
+window = Login()
+
+window.show()
+app.exec()
