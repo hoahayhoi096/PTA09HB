@@ -15,4 +15,7 @@ class Database:
 
     def get_notes(self):
         return self.notes
+    
+    def add_note(self, new_note):
+        self.notes.append(new_note)
 

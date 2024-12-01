@@ -4,6 +4,7 @@ import sys
 from PyQt6 import uic 
 import os
 from scripts.NoteItemScr import NoteItem
+from scripts.AddNoteScr import AddNote
 
 class MainPage(QMainWindow):  
     def __init__(self, controller, database):
@@ -17,6 +18,10 @@ class MainPage(QMainWindow):
         self.database = database
 
         self.load_notes()
+
+        # Mở cửa sổ/ trang thêm ghi chú
+        self.pushButtonAdd.clicked.connect(self.onPushButtonAdd)
+        self.AddNoteWindow = AddNote(self.database, self.controller)
 
 
     def load_notes(self):
@@ -37,6 +42,10 @@ class MainPage(QMainWindow):
             self.listWidget.addItem(item)
 
             self.listWidget.setItemWidget(item, noteWidget)
+
+
+    def onPushButtonAdd(self):
+        self.AddNoteWindow.show()
         
 
 
