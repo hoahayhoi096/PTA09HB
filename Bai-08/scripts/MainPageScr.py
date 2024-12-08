@@ -38,9 +38,6 @@ class MainPage(QMainWindow):
             self.NoteDetailWindow.show()
 
 
-
-
-
     def load_notes(self):
         self.listWidget.clear()
         self.listWidget.setSpacing(10)

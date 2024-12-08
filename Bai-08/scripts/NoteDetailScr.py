@@ -15,4 +15,34 @@ class NoteDetail(QDialog):
         self.database = database
         self.note = note
 
+        self.set_note_data()
+
+        self.btnDong.clicked.connect(self.onButtonDongClicked)
+
+        self.btnLuu.clicked.connect(self.onButtonLuuClicked)
+
+    def onButtonLuuClicked(self):
+        # Lấy dữ liệu từ giao diện 
+        title = self.lineEditTitle.text()
+        content = self.textEditContent.toPlainText()
         
+        # Cập nhật lại note ban đầu truyền vào 
+        self.note.title = title
+        self.note.content = content 
+
+        # Cập nhật cơ sở dữu liệu 
+        self.database.update_note(self.note)
+        # Tải lại danh sách 
+        self.controller.main_window.load_notes()
+        # Thông báo ra màn hình 
+        QMessageBox.information(self, "Thông báo", "Cập nhật ghi chú thành công!")
+
+
+
+
+    def onButtonDongClicked(self):
+        self.close()
+
+    def set_note_data(self):
+        self.lineEditTitle.setText(self.note.title)
+        self.textEditContent.setText(self.note.content)

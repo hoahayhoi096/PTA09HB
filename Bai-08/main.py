@@ -20,7 +20,6 @@ class Controller:
         self.login_window.show()
 
     
-
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     controller = Controller()
